@@ -1,13 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, TextInput, View } from 'react-native';
+import styled from 'styled-components/native';
+
+const Tela = styled.View`
+  flex: 1;
+  align-items: center;
+`
+
+const Titulo = styled.Text`
+  font-size: 20px;
+  margin-top: 10px;
+`
+
+const Input = styled.TextInput`
+  width: 50%;
+  background-color: #c4c4c4;
+  height: 50px;
+  font-size: 25px;
+  margin-top: 20px;
+  padding-left: 15px;
+  border-radius: 15px;
+`
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Tela>
+      <Titulo>Conversor de Quilometros</Titulo>
+      <Input placeholder = "Digite Km´s" />
+    </Tela>
   );
 }
 
